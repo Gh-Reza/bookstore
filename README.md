@@ -77,7 +77,7 @@ Example commands:
 ```sh
   mkdir bookstore
   cd bookstore
-  git clone https://github.com/Gh-Reza/bookstores.git
+  git clone https://github.com/Gh-Reza/bookstore.git
 ```
 
 ### Install <a name="install">
