@@ -12,7 +12,6 @@ function App() {
           <Route path="/" element={<Books />} />
           <Route path="/catagories" element={<Books />} />
         </Routes>
-        <Books />
       </main>
     </div>
   );
