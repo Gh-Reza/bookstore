@@ -46,7 +46,7 @@ const Book = ({
     <div className="col d-flex justify-content-center align-items-start flex-column">
       <p className="mb-0 text-uppercase completed">Current Chapter</p>
       <p className="chapter">{chapter}</p>
-      <button type="button" className="btn btn-primary px-3">Update prograss</button>
+      <button type="button" className="btn btn-primary px-4">Update prograss</button>
     </div>
   </div>
 );

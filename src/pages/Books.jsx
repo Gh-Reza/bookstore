@@ -1,9 +1,10 @@
 import books from '../data/BooksData';
 import Book from '../components/Book';
+import AddBook from '../components/AddBook';
 
 const Books = () => (
-  <div className="container py-4">
-    <div className="row gx-3">
+  <div className="container">
+    <div className="row gx-3 my-4 ">
       {books.map((book) => (
         <div key={book.id} className="col col-12 mb-3 border-none">
           <Book
@@ -16,6 +17,7 @@ const Books = () => (
         </div>
       ))}
     </div>
+    <AddBook />
   </div>
 );
 
