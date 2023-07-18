@@ -13,7 +13,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -39,6 +38,7 @@
   <summary>Client</summary>
   <ul>
     <li>React</li>
+    <li>Redux</li>
     <li>Bootstrap</li>
     <li>Webpack</li>
     <li>Jest</li>
@@ -50,6 +50,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **Created with react**
+- **Used redux**
 - **Nice UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
