@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
-import store from '../redux/store';
 
 const AddBook = () => {
   const [title, setTitle] = useState('');
