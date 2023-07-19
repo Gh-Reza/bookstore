@@ -20,7 +20,6 @@ const AddBook = () => {
     };
 
     dispatch(addBook(newBook));
-    console.log(store.getState());
   };
 
   return (
