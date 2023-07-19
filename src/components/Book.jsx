@@ -4,7 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 import '../css/Book.css';
 
 const Book = ({
-  genre, name, author, percentage, chapter,
+  id, genre, name, author, percentage, chapter, onRemove,
 }) => (
   <div className="row border p-3 bg-white shadow">
     <div className="col col-6">
@@ -18,7 +18,7 @@ const Book = ({
           </button>
         </li>
         <li className="list-inline-item">
-          <button type="button" className="btn ps-0 pe-0 text-info">
+          <button type="button" className="btn ps-0 pe-0 text-info" onClick={() => onRemove(id)}>
             Remove
           </button>
         </li>
@@ -52,11 +52,13 @@ const Book = ({
 );
 
 Book.propTypes = {
+  id: PropTypes.number.isRequired,
   genre: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired,
   chapter: PropTypes.string.isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default Book;
