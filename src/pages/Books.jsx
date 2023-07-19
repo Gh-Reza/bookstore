@@ -12,7 +12,7 @@ function Books() {
           {books.map((book) => (
             <div key={book.id} className="col col-12 mb-3 border-none">
               <Book
-                genre={book.genre}
+                genre={book.category}
                 name={book.title}
                 author={book.author}
                 percentage={25}
