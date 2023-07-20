@@ -1,8 +1,9 @@
 // import books from '../data/BooksData';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import Book from '../components/Book';
 import AddBook from '../components/AddBook';
-import { removeBook } from '../redux/books/booksSlice';
+import { getAllBooks, removeBook } from '../redux/books/booksSlice';
 
 function Books() {
   const dispatch = useDispatch();
@@ -11,6 +12,10 @@ function Books() {
   };
 
   const books = useSelector((store) => store.books);
+  useEffect(() => {
+    dispatch(getAllBooks());
+  }, [dispatch]);
+
   return (
     <>
       <div className="container">
