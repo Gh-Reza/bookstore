@@ -11,6 +11,7 @@ const AddBook = () => {
   const dispatch = useDispatch();
   const hundelSubmitEvent = (e) => {
     e.preventDefault();
+    e.target.reset();
     const newBook = {
       item_id: itemId,
       title,
