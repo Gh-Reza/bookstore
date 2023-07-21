@@ -7,10 +7,11 @@ const AddBook = () => {
   const [author, setAuthor] = useState('');
 
   const books = useSelector((store) => store.books);
-  const itemId = books[books.length - 1].item_id + 1;
+  const itemId = books.length;
   const dispatch = useDispatch();
   const hundelSubmitEvent = (e) => {
     e.preventDefault();
+    e.target.reset();
     const newBook = {
       item_id: itemId,
       title,

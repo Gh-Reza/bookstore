@@ -1,21 +1,26 @@
 // import books from '../data/BooksData';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import Book from '../components/Book';
 import AddBook from '../components/AddBook';
-import { removeBook } from '../redux/books/booksSlice';
+import { getAllBooks, removeBook } from '../redux/books/booksSlice';
 
 function Books() {
   const dispatch = useDispatch();
-  const handleRemove = (id) => {
-    dispatch(removeBook(id));
+  const handleRemove = async (id) => {
+    await dispatch(removeBook(id));
   };
 
   const books = useSelector((store) => store.books);
-  return (
+  useEffect(() => {
+    dispatch(getAllBooks());
+  }, [dispatch]);
+
+  return books.length > 0 ? (
     <>
       <div className="container">
         <div className="row gx-3 my-4 ">
-          {books.map((book) => (
+          {(books).map((book) => (
             <div key={book.item_id} className="col col-12 mb-3 border-none">
               <Book
                 id={book.item_id}
@@ -32,6 +37,15 @@ function Books() {
         <AddBook />
       </div>
     </>
+  ) : (
+    <div className="container">
+      <div className="row text-center">
+        <div className="col">
+          Empty
+        </div>
+      </div>
+      <AddBook />
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
 import booksReducer from './books/booksSlice';
 import catagoriesReducer from './catagories/catagoriesSlice';
 
@@ -7,6 +7,6 @@ const store = configureStore({
     books: booksReducer,
     catagories: catagoriesReducer,
   },
-});
+}, applyMiddleware);
 
 export default store;
