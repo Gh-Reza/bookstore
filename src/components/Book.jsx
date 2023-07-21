@@ -6,7 +6,7 @@ import '../css/Book.css';
 const Book = ({
   id, genre, name, author, percentage, chapter, onRemove,
 }) => (
-  <div className="row border p-3 bg-white shadow">
+  <div className="row border p-4 bg-white shadow">
     <div className="col col-6">
       <p className="text-muted fw-bold genre">{genre}</p>
       <h2 className="mb-0 h4 fw-bold">{name}</h2>
@@ -29,8 +29,8 @@ const Book = ({
         </li>
       </ul>
     </div>
-    <div className="col d-flex align-items-center">
-      <div className="row d-flex align-items-center">
+    <div className="col d-flex align-items-center p-2 px-5">
+      <div className="row d-flex align-items-center border-0 border-end">
         <div className="col">
           <CircularProgressbar value={percentage} text={`${percentage}%`} />
         </div>
@@ -46,7 +46,7 @@ const Book = ({
     <div className="col d-flex justify-content-center align-items-start flex-column">
       <p className="mb-0 text-uppercase completed">Current Chapter</p>
       <p className="chapter">{chapter}</p>
-      <button type="button" className="btn btn-primary px-4">Update prograss</button>
+      <button type="button" className="btn btn-primary px-4 text-uppercase">Update prograss</button>
     </div>
   </div>
 );

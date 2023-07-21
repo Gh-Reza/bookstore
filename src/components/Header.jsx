@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import '../assets/user.png';
 
 const Header = () => (
   <div className="container p-3">
