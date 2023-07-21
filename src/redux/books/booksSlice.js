@@ -35,8 +35,8 @@ const booksSlice = createSlice({
     {
       item_id: 1,
       title: 'Looding...',
-      author: '',
-      category: '',
+      author: 'Looding...',
+      category: 'Looding...',
     },
   ],
   reducers: {},
