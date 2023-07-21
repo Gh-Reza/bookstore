@@ -5,3 +5,22 @@
 .icon {
   width: 1.2rem;
 }
+
+@font-face {
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/RobotoSlab.ttf');
+}
+
+body {
+  font-family: 'RobotoSlab', serif;
+}
+
+.book-title {
+  font-family: 'RobotoSlab', serif;
+}
+
+.current-chapter {
+  font-family: 'RobotoSlab', serif;
+}

@@ -9,7 +9,7 @@ const Book = ({
   <div className="row border p-4 bg-white shadow">
     <div className="col col-6">
       <p className="text-muted fw-bold genre">{genre}</p>
-      <h2 className="mb-0 h4 fw-bold">{name}</h2>
+      <h2 className="mb-0 h4 fw-bold book-title">{name}</h2>
       <p className="mb-2 text-info">{author}</p>
       <ul className="list-inline">
         <li className="list-inline-item">
@@ -44,7 +44,7 @@ const Book = ({
       </div>
     </div>
     <div className="col d-flex justify-content-center align-items-start flex-column">
-      <p className="mb-0 text-uppercase completed">Current Chapter</p>
+      <p className="mb-0 text-uppercase completed current-chapter">Current Chapter</p>
       <p className="chapter">{chapter}</p>
       <button type="button" className="btn btn-primary px-4 text-uppercase">Update prograss</button>
     </div>
