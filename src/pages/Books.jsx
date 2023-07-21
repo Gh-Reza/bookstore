@@ -16,11 +16,11 @@ function Books() {
     dispatch(getAllBooks());
   }, [dispatch]);
 
-  return (
+  return books.length > 0 ? (
     <>
       <div className="container">
         <div className="row gx-3 my-4 ">
-          {(books ?? []).map((book) => (
+          {(books).map((book) => (
             <div key={book.item_id} className="col col-12 mb-3 border-none">
               <Book
                 id={book.item_id}
@@ -37,6 +37,15 @@ function Books() {
         <AddBook />
       </div>
     </>
+  ) : (
+    <div className="container">
+      <div className="row text-center">
+        <div className="col">
+          Empty
+        </div>
+      </div>
+      <AddBook />
+    </div>
   );
 }
 
