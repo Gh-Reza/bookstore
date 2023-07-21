@@ -25,7 +25,7 @@ const AddBook = () => {
   return (
     <div className="container border-top border-2 py-4 pb-5 mb-5">
       <form onSubmit={hundelSubmitEvent} className="border border p-5 bg-white shadow">
-        <h2 className="h2">Add new book</h2>
+        <h2 className="h3 fw-bold text-muted text-uppercase">Add new book</h2>
         <div className="row p-3 ps-0">
           <input
             className="border rounded col col-6 me-3 w-5 border-muted"
