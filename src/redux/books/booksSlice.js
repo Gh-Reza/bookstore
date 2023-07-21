@@ -13,9 +13,6 @@ export const getAllBooks = createAsyncThunk('books/getBooks', async () => {
       item_id: parseInt(key, 10),
     };
   });
-  // return allBooks.length > 0 ? allBooks : [{
-  //   title: 'Empty',
-  // }];
   return allBooks;
 });
 
