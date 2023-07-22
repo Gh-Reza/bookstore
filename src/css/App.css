@@ -1,3 +1,48 @@
 .main {
   background-color: #f2f2f2;
 }
+
+.icon {
+  width: 1.2rem;
+}
+
+@font-face {
+  font-family: 'RobotoSlab';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/RobotoSlab.ttf');
+}
+
+body {
+  font-family: 'RobotoSlab', serif;
+}
+
+.book-title {
+  font-family: 'RobotoSlab', serif;
+}
+
+.current-chapter {
+  font-family: 'RobotoSlab', serif;
+}
+
+.app-logo {
+  color: #0290ff;
+  font-size: 2rem;
+}
+
+.color--dark {
+  color: #121212;
+}
+
+.text--opacity {
+  opacity: 0.5;
+}
+
+.color--lb {
+  color: #4386bf;
+}
+
+.cbtn {
+  border: none;
+  background-color: transparent;
+}
