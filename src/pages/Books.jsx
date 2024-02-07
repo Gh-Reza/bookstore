@@ -7,8 +7,8 @@ import { getAllBooks, removeBook } from '../redux/books/booksSlice';
 
 function Books() {
   const dispatch = useDispatch();
-  const handleRemove = async (id) => {
-    await dispatch(removeBook(id));
+  const handleRemove = (id) => {
+    dispatch(removeBook(id));
   };
 
   const books = useSelector((store) => store.books);
@@ -16,11 +16,26 @@ function Books() {
     dispatch(getAllBooks());
   }, [dispatch]);
 
+  if (books.loading) {
+    return (
+      <div
+        style={{
+          height: '100vh',
+        }}
+        className="d-flex justify-content-center align-items-center w-100 h-100 bg-light"
+      >
+        <div className="spinner-border" role="status">
+          <span className="sr-only" />
+        </div>
+      </div>
+    );
+  }
+
   return books.length > 0 ? (
     <>
       <div className="container">
         <div className="row gx-3 my-4 ">
-          {(books).map((book) => (
+          {books.map((book) => (
             <div key={book.item_id} className="col col-12 mb-3 border-none">
               <Book
                 id={book.item_id}
@@ -40,9 +55,7 @@ function Books() {
   ) : (
     <div className="container">
       <div className="row text-center">
-        <div className="col">
-          Empty
-        </div>
+        <div className="col">Empty</div>
       </div>
       <AddBook />
     </div>
